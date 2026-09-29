@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اللجان | اتحاد المهندسين العرب</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="font-cairo text-gray-800 bg-white leading-relaxed">
+
+  <header id="header" class="sticky top-0 z-50 bg-white transition-shadow duration-300">
+
+    <div id="headerTop" class="border-b border-gray-200 overflow-hidden transition-all duration-300 max-h-20">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
+        <a href="#" class="flex items-center gap-2.5 font-bold text-brand">
+          <img src="/images/logo.svg" alt="شعار اتحاد المهندسين العرب" class="size-10">
+          <span class="hidden sm:inline">اتحاد المهندسين العرب</span>
+        </a>
+
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex gap-2">
+            <a href="#" aria-label="فيسبوك" class="size-8 grid place-items-center rounded-full text-gray-700 transition hover:bg-brand hover:text-white focus-visible:outline-2 focus-visible:outline-brand">
+              <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg>
+            </a>
+            <a href="#" aria-label="يوتيوب" class="size-8 grid place-items-center rounded-full text-gray-700 transition hover:bg-brand hover:text-white focus-visible:outline-2 focus-visible:outline-brand">
+              <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M23 7.5s-.2-1.7-1-2.4c-.9-1-1.9-1-2.4-1C16.2 4 12 4 12 4s-4.2 0-7.6.1c-.5.1-1.5.1-2.4 1-.8.7-1 2.4-1 2.4S1 9.4 1 11.3v1.5c0 1.9.1 3.8.1 3.8s.2 1.7 1 2.4c.9 1 2.1.9 2.6 1 1.9.2 7.3.2 7.3.2s4.2 0 7.6-.2c.5-.1 1.5-.1 2.4-1 .8-.7 1-2.4 1-2.4s.1-1.9.1-3.8v-1.5C23.1 9.4 23 7.5 23 7.5zM9.8 15V8.6l6 3.2-6 3.2z"/></svg>
+            </a>
+          </div>
+
+          <form id="searchForm" class="flex items-center border border-gray-200 rounded-md overflow-hidden focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/20 transition">
+            <input id="searchInput" type="search" placeholder="ابحث عن لجنة..." class="w-32 sm:w-48 px-3 py-1.5 text-sm outline-none">
+            <button type="submit" aria-label="بحث" class="px-2.5 text-gray-500 hover:text-brand">
+              <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <nav class="relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+
+        <button id="menuToggle" aria-label="القائمة" aria-expanded="false"
+          class="lg:hidden flex flex-col gap-1.5 p-2 rounded focus-visible:outline-2 focus-visible:outline-brand">
+          <span class="block w-6 h-0.5 bg-gray-800 transition"></span>
+          <span class="block w-6 h-0.5 bg-gray-800 transition"></span>
+          <span class="block w-6 h-0.5 bg-gray-800 transition"></span>
+        </button>
+
+        <ul id="navLinks"
+          class="hidden absolute top-full inset-x-0 flex-col bg-white shadow-lg border-t border-gray-100
+                 lg:static lg:flex lg:flex-row lg:items-stretch lg:h-full lg:shadow-none lg:border-0">
+          <li><a href="#" class="flex items-center h-full px-4 py-3 lg:py-0 text-sm font-medium transition hover:text-brand">الرئيسية</a></li>
+          <li><a href="#" class="flex items-center h-full px-4 py-3 lg:py-0 text-sm font-medium transition hover:text-brand">عن الاتحاد</a></li>
+          <li><a href="#" class="flex items-center h-full px-4 py-3 lg:py-0 text-sm font-medium transition hover:text-brand">الأنشطة والاجتماعات</a></li>
+
+          <li class="relative group">
+            <a href="#" class="flex items-center gap-1 h-full px-4 py-3 lg:py-0 text-sm font-medium transition hover:text-brand">
+              المركز الإعلامي <span class="text-[10px]">&#9662;</span>
+            </a>
+            <ul class="hidden lg:block absolute top-full right-0 min-w-44 bg-white shadow-lg rounded-b-md
+                       invisible opacity-0 translate-y-2 transition-all duration-200
+                       group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                       group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+              <li><a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-light hover:text-brand">الأخبار</a></li>
+              <li><a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-light hover:text-brand">النشاط الإعلامي</a></li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a href="#" class="flex items-center gap-1 h-full px-4 py-3 lg:py-0 text-sm font-medium transition hover:text-brand">
+              الهيئات المتخصصة <span class="text-[10px]">&#9662;</span>
+            </a>
+            <ul class="hidden lg:block absolute top-full right-0 min-w-44 bg-white shadow-lg rounded-b-md
+                       invisible opacity-0 translate-y-2 transition-all duration-200
+                       group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                       group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+              <li><a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-light hover:text-brand">النقابات</a></li>
+              <li><a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-light hover:text-brand">الجمعيات</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" aria-current="page" class="flex items-center h-full px-4 py-3 lg:py-0 text-sm font-medium bg-brand text-white">اللجان</a></li>
+          <li><a href="#" class="flex items-center h-full px-4 py-3 lg:py-0 text-sm font-medium transition hover:text-brand">ملفات الاتحاد</a></li>
+        </ul>
+
+        <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-white text-sm font-semibold transition
+                           hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+          <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          تواصل معنا
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="relative bg-brand-dark bg-[url('/images/c3.jpg')] bg-cover bg-center text-white">
+    <div class="absolute inset-0 bg-linear-to-l from-brand-dark/95 to-brand/80"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14">
+      <nav aria-label="breadcrumb">
+        <ol class="flex items-center gap-2 text-sm opacity-85 mb-1">
+          <li><a href="#" class="hover:underline">الرئيسية</a></li>
+          <li aria-hidden="true">‹</li>
+          <li>اللجان</li>
+        </ol>
+      </nav>
+      <h1 class="text-2xl md:text-3xl font-bold">اللجان</h1>
+    </div>
+  </section>
+
+  <section class="bg-[#f8f8f8] py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-8">
+        <span class="text-brand">جميع</span> اللجان
+      </h2>
+
+      <div id="committeesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+      <p id="emptyMsg" class="hidden text-center text-gray-500 py-10">لا توجد لجان مطابقة لبحثك.</p>
+
+      <div class="text-center mt-10">
+        <button id="loadMoreBtn"
+          class="px-8 py-2.5 bg-white border border-gray-300 rounded-md text-sm font-semibold text-gray-700 shadow-sm transition
+                 hover:border-brand hover:text-brand hover:shadow-md
+                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+          شاهد المزيد
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-footer text-white/85 pt-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_0.8fr] gap-10 pb-8">
+
+      <div>
+        <a href="#" class="flex items-center gap-2.5 font-bold text-white">
+          <img src="/images/logo.svg" alt="" class="size-10 bg-white rounded-full p-1">
+          <span>اتحاد المهندسين العرب</span>
+        </a>
+        <p class="text-sm mt-3 mb-5">
+          تقوم الأمانة العامة لاتحاد المهندسين العرب بإصدار هوية الإنتساب للاتحاد وهي معتمدة من جميع الهيئات الهندسية
+          العربية الأعضاء (نقابات، جمعيات، إتحادات ... وغير ذلك).
+        </p>
+        <div class="flex flex-wrap gap-8 text-sm">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="size-5 fill-current"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span><small class="block text-xs opacity-70">البريد الإلكتروني</small>info@fae.com</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="size-5 fill-current"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            <span><small class="block text-xs opacity-70">رقم الهاتف</small><bdi dir="ltr">+202 27356010</bdi></span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-4">عناوين سريعة</h4>
+        <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          <li><a href="#" class="transition hover:text-white hover:pr-1">الرئيسية</a></li>
+          <li><a href="#" class="transition hover:text-white hover:pr-1">الهيئات المتخصصة</a></li>
+          <li><a href="#" class="transition hover:text-white hover:pr-1">عن الاتحاد</a></li>
+          <li><a href="#" class="transition hover:text-white hover:pr-1">ملفات الاتحاد</a></li>
+          <li><a href="#" class="transition hover:text-white hover:pr-1">الأنشطة والاجتماعات</a></li>
+          <li><a href="#" class="transition hover:text-white hover:pr-1">اللجان</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-4">التواصل الاجتماعي</h4>
+        <div class="flex gap-2">
+          <a href="#" aria-label="فيسبوك" class="size-9 grid place-items-center rounded-full bg-white/10 transition hover:bg-white hover:text-brand">
+            <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg>
+          </a>
+          <a href="#" aria-label="يوتيوب" class="size-9 grid place-items-center rounded-full bg-white/10 transition hover:bg-white hover:text-brand">
+            <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M23 7.5s-.2-1.7-1-2.4c-.9-1-1.9-1-2.4-1C16.2 4 12 4 12 4s-4.2 0-7.6.1c-.5.1-1.5.1-2.4 1-.8.7-1 2.4-1 2.4S1 9.4 1 11.3v1.5c0 1.9.1 3.8.1 3.8s.2 1.7 1 2.4c.9 1 2.1.9 2.6 1 1.9.2 7.3.2 7.3.2s4.2 0 7.6-.2c.5-.1 1.5-.1 2.4-1 .8-.7 1-2.4 1-2.4s.1-1.9.1-3.8v-1.5C23.1 9.4 23 7.5 23 7.5zM9.8 15V8.6l6 3.2-6 3.2z"/></svg>
+          </a>
+        </div>
+        <a href="#" class="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-md bg-white text-brand text-sm font-semibold transition hover:bg-brand-light">
+          <svg viewBox="0 0 24 24" class="size-4 fill-current"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          تواصل معنا
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 border-t border-white/10 text-xs text-center md:text-right">
+      جميع الحقوق محفوظة لاتحاد المهندسين العرب &copy;2026
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

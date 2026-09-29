@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0e7a45;
+  --color-brand-dark: #0a5a35;
+  --color-brand-light: #eef6f1;
+  --color-footer: #0d3b2b;
+  --font-cairo: "Cairo", sans-serif;
+}
